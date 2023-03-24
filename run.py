@@ -1,3 +1,4 @@
+import time
 import BruteForce_clone as BruteForceClone
 import generate_remainder_2 as GenerateRemainder2
 
@@ -21,17 +22,27 @@ def format_print(TRIANGULAR_NUMBERS, rests, bonuses):
 
 
 def run_brute_force():
-    (triangular_numbers, rest_collection, bonus) = BruteForceClone.test(98)
-    format_print(triangular_numbers, rest_collection, bonus)
+    start_time = time.perf_counter_ns()
+    (triangle_numbers, remainder_2, bonus) = BruteForceClone.test(98)
+    end_time = time.perf_counter_ns()
+    format_print(triangle_numbers, remainder_2, bonus)
+    return end_time - start_time
 
 def run_remainder_2():
+    start_time = time.perf_counter_ns()
     sum_remainders = GenerateRemainder2.generate_sum_remainder(150)
     bonuses = GenerateRemainder2.generate_bonus(150)
     triangular_row = GenerateRemainder2.generate_triangular_row(sum_remainders, bonuses)
+    end_time = time.perf_counter_ns()
     format_print(triangular_row, sum_remainders, bonuses)
+    return end_time - start_time
 
 if __name__ == "__main__":
     print("BRUTE FORCE CLONE: ")
-    run_brute_force()
+    brute_force_time = run_brute_force()
     print("REMAINDER 2: ")
-    run_remainder_2()
+    remainder_2_time = run_remainder_2()
+
+    print(f"brute_force time: {brute_force_time}")
+    print(f"remainder_2 time: {remainder_2_time}")
+
