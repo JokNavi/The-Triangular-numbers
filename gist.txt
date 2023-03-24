@@ -1,0 +1,19 @@
+This program is written in Python and consists of several functions that are designed to calculate and analyze triangular numbers.
+
+The triangular(n) function takes an integer n as input and returns the nth triangular number. A triangular number is a number that can be represented in the form of an equilateral triangle, where the number of dots on each side of the triangle is equal to the number being represented. For example, the 4th triangular number is 10, which can be represented by an equilateral triangle with 4 dots on each side.
+
+The do_triangular(n) function generates a list of triangular numbers from 1 to n, using the triangular(n) function. The resulting list is returned.
+
+The test_last_parts() function tests each triangular number in the range of 1 to 500 to see if the last two digits of the number match any of the values in the CHECK_VALUES list. If a match is found, the function prints the index of the triangular number and the number itself.
+
+The remainder_by_x(number, x) function takes a number and a divisor x as input, and returns the remainder of the number divided by x.
+
+The rest_of_all(triangular_numbers) function takes a list of triangular numbers as input and returns the sum of the remainders of each number in the list when divided by 3.
+
+The length(numbers) function takes a list of numbers as input and returns the length of the longest number in the list (in terms of the number of digits).
+
+The format_print(TRIANGULAR_NUMBERS, rests, bonuses) function takes three lists as input: a list of triangular numbers, a list of remainders for each triangular number, and a list of bonuses for each triangular number. The function formats the output in a way that aligns the numbers and their respective remainders and bonuses in columns, with appropriate spacing.
+
+The test(range) function takes a range as input and generates a list of triangular numbers using the do_triangular(n) function. The function then calculates the remainder of each triangular number in the list when divided by 3 using the rest_of_all(triangular_numbers) function, and calculates the bonus for each triangular number. The function returns a tuple containing the list of triangular numbers, the list of remainders, and the list of bonuses.
+
+Overall, this program is designed to generate and analyze triangular numbers, and provides a useful tool for exploring the patterns and properties of these numbers.
