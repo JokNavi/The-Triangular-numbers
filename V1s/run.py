@@ -1,6 +1,6 @@
 import time
 import BruteForce_clone as BruteForceClone
-import generate_remainder_2 as GenerateRemainder2
+import V1 as GenerateRemainder2
 
 def length(numbers):
     return max(len(str(number)) for number in numbers)

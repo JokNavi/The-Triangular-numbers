@@ -106,3 +106,26 @@ This file imports and runs the functions from the other two files and formats th
         run_remainder_2()
 
 When this script is run, it will execute the run_brute_force and run_remainder_2 functions, which will print the formatted output for each method.
+
+---
+
+## `Generate_remainder_2`
+
+The Generate_remainder_2.py file contains three functions that work together to generate a sequence of triangular numbers with specific properties. The mathematical formula that captures the essence of this file can be represented as follows:
+
+`T_n = T_(n-1) + R_n + B_n`
+
+### Where:
+- T_n represents the nth triangular number in the sequence
+- R_n represents the nth sum remainder
+- R_n = 3 * floor(n/3) - 2 (for n >= 2)
+- B_n represents the nth bonus
+- B_n = 1 + floor(n/3)
+
+### Explanation:
+
+1. generate_sum_remainder(length): This function generates a list of sum remainders (R_n) for the given length. The formula for R_n is derived from the loop in the function, which repeats each number i three times.
+
+2. generate_bonus(length): This function generates a list of bonuses (B_n) for the given length. The formula for B_n is derived from the loop in the function,  which creates a sequence of the form 1, 1, 2, 2, 2, 3, 3, 3, 4, ...
+
+3. generate_triangular_row(sum_remainders, bonuses): This function generates the triangular row (T_n) using the given sum_remainders and bonuses. The formula for T_n is derived from the loop in the function, which calculates each element of the output list as the sum of the previous element, the corresponding sum_remainder, and bonus.
