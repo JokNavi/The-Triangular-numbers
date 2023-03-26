@@ -92,6 +92,7 @@ TESTING:
     for x in range(0, 13):
         remainder[x+1] + remainder[x+2]
 
+
     TEST 10:
     1,  2,  3,   4,   5,   6,   7,   8,   9,  10,  
 
@@ -102,3 +103,5 @@ TESTING:
     1,  0,  1,   1,   0,   1,   1,   0,  1,   1,   0,  1,   1,   0,  1,   1,   0,  1,   1,   0,  1,   1,   0,  1,   1,    0,    1,    1,
 
 
+    scale = O(n)
+    scale = O(n)

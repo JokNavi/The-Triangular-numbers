@@ -15,7 +15,7 @@ def remainder_by_x(number, x):
 
 
 def rest_of_all(triangular_numbers):
-    X = 2
+    X = 3
     total = sum(remainder_by_x(value, X) for value in triangular_numbers)
     return total
 

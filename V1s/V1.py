@@ -9,7 +9,7 @@ def generate_sum_remainder(length):
 
 def generate_bonus(length):
     output = [1]
-    for i in range(0, math.floor(length/3))[::3]:
+    for i in range(0, length//3)[::3]:
         next_value = output[i]+1
         output.append(next_value)
         output.append(next_value)
