@@ -15,6 +15,3 @@ def generate_triangle_numbers(amount: int):
 
 if __name__ == "__main__":
     print(generate_triangle_numbers(10))
-    #1, 1, 2,  3,  3,  4,  5,
-    #0, 1, 2,  3,  4,  5,  6,
-
