@@ -1,10 +1,10 @@
+X = 3
 
 def generate_remainders(amount: int):
-    pattern = [0] + [i for i in range(1, amount) for _ in range(min(3, amount - i))]
-    return pattern[:amount]
+    return [round(i/X) for i in range(1, amount+1)]
 
 def generate_bonuses(amount: int):
-    return [2*n//3+1 for n in range(0, amount)]
+    return [2*n//X+1 for n in range(0, amount)]
 
 def generate_triangle_numbers(amount: int):
     remainders = generate_remainders(amount)
@@ -15,3 +15,6 @@ def generate_triangle_numbers(amount: int):
 
 if __name__ == "__main__":
     print(generate_triangle_numbers(10))
+    print(generate_remainders(10))
+    print(generate_bonuses(10))
+
