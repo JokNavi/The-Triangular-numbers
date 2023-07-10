@@ -1,4 +1,4 @@
-X = 3
+X = 9
 
 def generate_remainders(amount: int):
     return [round(i/X) for i in range(1, amount+1)]
@@ -14,7 +14,12 @@ def generate_triangle_numbers(amount: int):
     
 
 if __name__ == "__main__":
-    print(generate_triangle_numbers(10))
-    print(generate_remainders(10))
-    print(generate_bonuses(10))
+    triangular_numbers = generate_triangle_numbers(100)
+    remainders = generate_remainders(100)
+    bonuses = generate_bonuses(100)
+
+    for t, r ,b in zip(triangular_numbers, remainders, bonuses):
+        print(f"+ {r} + {b} == {t}")
+
+    print(generate_remainders(50))
 
